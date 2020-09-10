@@ -1,0 +1,65 @@
+<%- include('defaults/header'); %>
+
+
+<!--<input type="text" style="display: none" value="region/oceania" id="region">-->
+<input type="text" style="display: none" value="<%= name; %>" id="region"/> 
+<section class="country">
+
+	
+	<div class="country__flag">
+		<img src="<%= flag; %>" alt="flag">
+	</div>
+
+	<div class="country__details">
+		
+		<div class="country__main">
+			<h2 class="heading-1 country__align-center"><%=name; %></h2>
+			<div class="country__descrip">
+				<p class="text__semi-bold">
+				<span class="text__bold">Native Name:</span>
+				&nbsp;<%= nativeName;%>
+				</p>
+				<p class="text__semi-bold">
+					<span class="text__bold">Population:</span>
+					&nbsp;<%= population;%>
+				</p>
+				<p class="text__semi-bold">
+					<span class="text__bold">Region:</span>
+					&nbsp;<%= region;%>
+				</p>
+				<p class="text__semi-bold">
+					<span class="text__bold">Sub Region:</span>
+					&nbsp;<%= subregion;%>
+				</p>
+				<p class="text__semi-bold">
+					<span class="text__bold">Capital:</span>
+					&nbsp;<%= capital;%>
+				</p>
+				<p class="text__semi-bold">
+					<span class="text__bold">Top Level Domain:</span>
+					&nbsp;<%= topLevelDomain;%>
+				</p>
+				<p class="text__semi-bold">
+					<span class="text__bold">Currencies:</span> 
+					&nbsp;<%= currencies;%>
+				</p>
+				<p class="text__semi-bold">
+					<span class="text__bold">Languages:</span> 
+					&nbsp;<%= languages;%>
+				</p>
+			</div>
+		</div>
+		<div class="country__border">
+			<h3 class="text__bold country__align-center">Border Countries:</h3>
+			<div class="text__semi-bold country__neighbours">
+				<% borderCountries.forEach(nation=>{%>
+				<a href="/countries/<%= nation; %>" class="country__link"><%= nation; %></a>
+				<% }) %>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+
+<%- include('defaults/footer2'); %>

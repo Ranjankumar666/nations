@@ -1,0 +1,31 @@
+//- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+//- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+//- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+//- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+//- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+//- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+
+$color-light-background: hsl(0, 0%, 98%);
+$color-light-input: hsl(0, 0%, 52%);
+$color-light-text: hsl(0, 0%, 100%);
+
+$bp-large: 68.75em;//1100px
+$bp-medium: 50em;//800px
+$bp-x-medium: 37.5em;///600px
+$bp-small: 31.25em;//500px
+$bp-x-small: 25em;//400px
+
+html{
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body{
+	
+	background-color: $color-light-background;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 1.4rem;
+	margin: 0;
+	padding: 0;
+}

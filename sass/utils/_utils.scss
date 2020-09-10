@@ -1,0 +1,61 @@
+.heading-1{
+	font-weight: 300;
+	font-size: 3rem;
+	line-height: 2;
+}
+
+.heading-2{
+	font-weight: 600;
+	font-size: 2rem;
+}
+
+.heading-3{
+	font-weight: 800;
+	font-size: 1.5rem;
+}
+
+
+.align-center{
+	text-align: center;
+}
+
+.margin-right-sm{
+	margin-right: 2rem;
+}
+.margin-right-md{
+	margin-right: 4rem;
+}
+.margin-right-lg{
+	margin-right: 6rem;
+}
+
+.list{
+	margin-top: 2rem;
+	border: none;
+}
+.margin-right-auto{
+	margin-right: auto;
+}
+
+.icon{
+	height: 2rem;
+	width: 2rem;
+	fill: $color-light-input;
+}
+
+.icon-sm{
+	height: 2rem;
+	width: 2rem;
+	fill: $color-light-input;
+}
+
+.text{
+	&__semi-bold{
+		font-weight: 600;
+		font-size: 1.6rem;
+	}
+	&__bold{
+		font-weight: 800;
+		font-size: 1.8rem;
+	}
+}

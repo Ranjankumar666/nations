@@ -1,0 +1,93 @@
+.country{
+    grid-row: 3/4;
+    grid-column: main-start 1/main-end 8;
+    display: grid;
+    margin-top: 4rem; 
+    grid-gap: 4rem;
+    color: #858585;
+
+    @media only screen and (min-width: $bp-medium){
+       grid-gap: 10rem;
+       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    &__flag{
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    &__details{
+        display: grid;
+        grid-auto-flow: row;
+    }
+
+    &__main{
+        margin-bottom: 2rem;
+    }
+
+    &__border{
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 1rem;
+        align-items: center;
+        
+        @media only screen and (max-width: $bp-medium){
+            grid-auto-flow: row;
+            grid-template-columns: auto;
+        }
+
+
+    }
+    &__link{
+        text-decoration: none;
+        padding: .5rem 2rem;
+        border-radius: .5rem;
+        font: inhreit;
+        border: .2rem solid rgba($color-light-input,0.4);
+        color: $color-light-input;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        margin: .5rem 1rem;
+        transition: all .3s ease;
+
+        &:hover{
+            background-color: hsl(0, 0%, 52%);
+            color: hsl(0, 0%, 100%);
+        }
+    }
+    &__neighbours{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (min-width: $bp-medium){
+            align-items: start;
+        }
+
+    }
+
+    &__descrip{
+        display: grid;
+        grid-gap: 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: auto;  
+        }
+
+        & > *{
+            margin: 1rem 2rem;
+        }
+    }
+
+    &__align-center{
+         @media only screen and (max-width: $bp-medium) {
+            text-align: center  
+        }
+    }
+
+
+}

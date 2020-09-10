@@ -1,0 +1,389 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  background-color: #fafafa;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  display: grid;
+  grid-template-columns: [space-start] 8rem [space-end] repeat(8, [main-start] minmax(max-content, 1fr) [main-end]) [last-space-start] 8rem [last-space-end];
+  grid-template-rows: 8rem repeat(2, max-content);
+  grid-row-gap: 5rem; }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-row-gap: 2rem;
+      grid-template-columns: [space-start] 4rem [space-end] repeat(8, [main-start] minmax(max-content, 1fr) [main-end]) [last-space-start] 4rem [last-space-end]; } }
+
+.container__body {
+  grid-row: 3/4;
+  grid-column: main-start 1/main-end 8;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: #858585; }
+  @media only screen and (max-width: 68.75em) {
+    .container__body {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
+      grid-gap: 2rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .container__body {
+      display: flex; } }
+  .container__body__card {
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 25rem;
+    display: grid;
+    text-decoration: none;
+    color: #858585;
+    grid-template-rows: repeat(2, max-content);
+    border-radius: 2px;
+    margin-bottom: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem; }
+    @media only screen and (max-width: 68.75em) {
+      .container__body__card {
+        margin-left: 0;
+        margin-right: 0;
+        width: auto; } }
+    .container__body__card__img {
+      width: 100%;
+      height: 15rem;
+      object-fit: cover; }
+      @media only screen and (max-width: 50em) {
+        .container__body__card__img {
+          height: auto; } }
+    .container__body__card__details {
+      padding: 0 3rem;
+      align-self: center;
+      padding-bottom: 4rem; }
+
+.country {
+  grid-row: 3/4;
+  grid-column: main-start 1/main-end 8;
+  display: grid;
+  margin-top: 4rem;
+  grid-gap: 4rem;
+  color: #858585; }
+  @media only screen and (min-width: 50em) {
+    .country {
+      grid-gap: 10rem;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); } }
+  .country__flag {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .country__flag img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; }
+  .country__details {
+    display: grid;
+    grid-auto-flow: row; }
+  .country__main {
+    margin-bottom: 2rem; }
+  .country__border {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 1rem;
+    align-items: center; }
+    @media only screen and (max-width: 50em) {
+      .country__border {
+        grid-auto-flow: row;
+        grid-template-columns: auto; } }
+  .country__link {
+    text-decoration: none;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    font: inhreit;
+    border: 0.2rem solid rgba(133, 133, 133, 0.4);
+    color: #858585;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    margin: .5rem 1rem;
+    transition: all .3s ease; }
+    .country__link:hover {
+      background-color: #858585;
+      color: white; }
+  .country__neighbours {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (min-width: 50em) {
+      .country__neighbours {
+        align-items: start; } }
+  .country__descrip {
+    display: grid;
+    grid-gap: 0 2rem;
+    grid-template-columns: repeat(2, 1fr); }
+    @media only screen and (max-width: 50em) {
+      .country__descrip {
+        grid-template-columns: auto; } }
+    .country__descrip > * {
+      margin: 1rem 2rem; }
+  @media only screen and (max-width: 50em) {
+    .country__align-center {
+      text-align: center; } }
+
+.container__header {
+  grid-column: space-start/last-space-end;
+  display: grid;
+  grid-template-columns: 8rem repeat(8, [text-start] minmax(max-content, 1fr) [text-end]) 8rem;
+  grid-template-rows: 1fr;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+  .container__header__heading {
+    grid-column: text-start 1/text-end 1;
+    align-self: center;
+    font-size: 2.6rem;
+    color: #858585; }
+  @media only screen and (max-width: 50em) {
+    .container__header {
+      display: flex;
+      justify-content: center; } }
+
+.container__search {
+  grid-row: 2/3;
+  grid-column: space-end/main-end 8;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-content: space-between; }
+  @media only screen and (max-width: 37.5em) {
+    .container__search {
+      grid-auto-flow: row;
+      justify-content: space-evenly; } }
+  .container__search__form {
+    display: grid;
+    grid-auto-flow: column; }
+  .container__search__input {
+    border: none;
+    padding: 2rem 4rem;
+    font-size: 1.6rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    background-color: white;
+    color: #858585;
+    border-radius: .4rem;
+    font-family: 'Nunito Sans', sans-serif; }
+    .container__search__input:focus, .container__search__input:active {
+      outline: none; }
+  .container__search__btn {
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    margin-left: -6rem; }
+    .container__search__btn:focus, .container__search__btn:active {
+      outline: none;
+      transform: translateY(-2px); }
+  .container__search__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: #858585; }
+  .container__search__options {
+    padding: 2rem 4rem;
+    background-color: white;
+    border-radius: .4rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+    cursor: pointer;
+    color: #858585;
+    transition: all 200ms;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease; }
+    .container__search__options:active, .container__search__options:focus {
+      outline: none; }
+    .container__search__options::selected {
+      border: none; }
+
+.search__icon {
+  margin-left: 2rem; }
+
+.list {
+  padding: 2rem 6.5rem;
+  list-style: none;
+  display: none;
+  background-color: white;
+  grid-row-gap: 1rem;
+  transition: all 200ms ease;
+  position: absolute;
+  top: -5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); }
+  .list__link {
+    text-decoration: none;
+    color: inherit; }
+  .list__item {
+    display: block;
+    margin-bottom: 1px solid white; }
+
+.heading-1 {
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 2; }
+
+.heading-2 {
+  font-weight: 600;
+  font-size: 2rem; }
+
+.heading-3 {
+  font-weight: 800;
+  font-size: 1.5rem; }
+
+.align-center {
+  text-align: center; }
+
+.margin-right-sm {
+  margin-right: 2rem; }
+
+.margin-right-md {
+  margin-right: 4rem; }
+
+.margin-right-lg {
+  margin-right: 6rem; }
+
+.list {
+  margin-top: 2rem;
+  border: none; }
+
+.margin-right-auto {
+  margin-right: auto; }
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  fill: #858585; }
+
+.icon-sm {
+  height: 2rem;
+  width: 2rem;
+  fill: #858585; }
+
+.text__semi-bold {
+  font-weight: 600;
+  font-size: 1.6rem; }
+
+.text__bold {
+  font-weight: 800;
+  font-size: 1.8rem; }
+
+#show {
+  display: grid; }
+
+#noShow {
+  display: none; }
+
+.back {
+  padding: .5rem 3rem;
+  background-color: white;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: none;
+  border-radius: .4rem;
+  text-decoration: none;
+  color: #858585;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+  align-items: center; }
+  .back:active, .back:focus {
+    outline: none; }
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-8-8 19:33:19
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-bottom
+ * ----------------------------------------
+ */
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(10rem);
+    transform: translateY(10rem); } }
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(10rem);
+    transform: translateY(10rem); } }
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-8-9 0:16:8
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation rotate-scale-down
+ * ----------------------------------------
+ */
+.rotate-scale-down {
+  -webkit-animation: rotate-scale-down 0.3s linear both;
+  animation: rotate-scale-down 0.3s linear both; }
+
+.rotate-rev-scale-down {
+  -webkit-animation: rotate-rev-scale-down 0.3s linear both;
+  animation: rotate-rev-scale-down 0.3s linear both; }
+
+@-webkit-keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateX(0);
+    transform: scale(1) rotateX(0); }
+  50% {
+    -webkit-transform: scale(0.5) rotateX(90deg);
+    transform: scale(0.5) rotateX(90deg); }
+  100% {
+    -webkit-transform: scale(1) rotateX(180deg) translateY(-1rem);
+    transform: scale(1) rotateX(180deg) translateY(-1rem); } }
+
+@keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateX(0);
+    transform: scale(1) rotateX(0); }
+  50% {
+    -webkit-transform: scale(0.5) rotateX(90deg);
+    transform: scale(0.5) rotateX(90deg); }
+  100% {
+    -webkit-transform: scale(1) rotateX(180deg) translateY(-1rem);
+    transform: scale(1) rotateX(180deg) translateY(-1rem); } }
+
+@-webkit-keyframes rotate-rev-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateX(180deg);
+    transform: scale(1) rotateX(180deg); }
+  50% {
+    -webkit-transform: scale(0.5) rotateX(90deg);
+    transform: scale(0.5) rotateX(90deg); }
+  100% {
+    -webkit-transform: scale(1) rotateX(0) translateY(1rem);
+    transform: scale(1) rotateX(0) translateY(1rem); } }
+
+@keyframes rotate-rev-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateX(180deg) translateY(1rem);
+    transform: scale(1) rotateX(180deg) translateY(1rem); }
+  50% {
+    -webkit-transform: scale(0.5) rotateX(90deg);
+    transform: scale(0.5) rotateX(90deg); }
+  100% {
+    -webkit-transform: scale(1) rotateX(0);
+    transform: scale(1) rotateX(0); } }

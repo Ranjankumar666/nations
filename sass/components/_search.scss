@@ -1,0 +1,100 @@
+.container{
+  &__search {
+        grid-row: 2/3;
+        grid-column: space-end/main-end 8;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: start;
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 2rem;
+        align-items: center;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $bp-x-medium) {
+            grid-auto-flow: row;
+             justify-content: space-evenly;
+        }
+
+        &__form {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        &__input {
+            border: none;
+            padding: 2rem 4rem;
+            font-size: 1.6rem;
+            box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .1);
+            background-color: $color-light-text;
+            color: $color-light-input;
+            border-radius: .4rem;
+            font-family: 'Nunito Sans', sans-serif;
+
+
+            &:focus,
+            &:active {
+                outline: none;
+
+            }
+        }
+
+        &__btn {
+            align-self: center;
+            background-color: transparent;
+            border: none;
+            margin-left: -6rem;
+
+            &:focus,
+            &:active {
+                outline: none;
+                transform: translateY(-2px);
+
+            }
+        }
+
+
+        &__icon {
+            height: 2rem;
+            width: 2rem;
+            fill: $color-light-input;
+        }
+
+        &__options {
+            padding: 2rem 4rem;
+            background-color: $color-light-text;
+            border-radius: .4rem;
+            box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .1);
+            font-family: inherit;
+            cursor: pointer;
+            color: $color-light-input;
+            transition: all 200ms;
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 500ms ease;
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+
+            &::selected {
+                border: none;
+            }
+
+        }
+
+
+    }
+}
+
+.search{
+
+    &__icon {
+        margin-left: 2rem;
+    }
+}
+

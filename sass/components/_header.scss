@@ -1,0 +1,23 @@
+.container{
+  &__header {
+        grid-column: space-start/last-space-end;
+        display: grid;
+        grid-template-columns: 8rem repeat(8, [text-start]minmax(max-content, 1fr)[text-end]) 8rem;
+        grid-template-rows: 1fr;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+
+        &__heading {
+            grid-column: text-start 1/text-end 1;
+            align-self: center;
+            font-size: 2.6rem;
+            color: $color-light-input;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+}

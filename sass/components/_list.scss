@@ -1,0 +1,23 @@
+.list {
+    padding: 2rem 6.5rem;
+    list-style: none;
+    display: none;
+    background-color: $color-light-text;
+    grid-row-gap: 1rem;
+    transition: all 200ms ease;
+    position: absolute;
+    top: -5rem;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .1);
+
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__item {
+        display: block;
+        margin-bottom: 1px solid $color-light-text;
+
+    }
+}

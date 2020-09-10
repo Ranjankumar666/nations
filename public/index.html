@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rest Countries</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <input type="text" style="display: none" value="all" id="region">
+    <div class="container">
+        <header class="container__header">
+            <h2 class="container__header__heading">
+                Where in the world?</h2>
+        </header>
+        <div class="container__search heading-3">
+            <form action="/" method="post" class="container__search__form margin-right-auto">
+                <input type="text" class="container__search__input heading-3" placeholder="Search for a country" name="search" autocomplete="false">
+                <button type="submit" class="container__search__btn">
+                    <svg class="icon">
+                        <use xlink:href="sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+            </form>
+            <div name="Region" class="container__search__options ">
+                <div class="container__search__options__default">
+                    Filter By Region
+                    <svg class="icon search__icon">
+                        <use xlink:href="sprite.svg#icon-angle-up"></use>
+                    </svg>
+                </div>
+                <ul class="list slide-bottom">
+                    <li class="list__item">
+                        <a href="/" class="list__link">All</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="/asia" class="list__link">Asia</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="/africa" class="list__link">Africa</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="/america" class="list__link">America</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="/europe" class="list__link">Europe</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="/oceania" class="list__link">Oceania</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <section class="container__body">
+        </section>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='/script.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+
+  {
+    name: 'India',
+    topLevelDomain: [ '.in' ],
+    alpha2Code: 'IN',
+    alpha3Code: 'IND',
+    callingCodes: [ '91' ],
+    capital: 'New Delhi',
+    altSpellings: [ 'IN', 'Bhārat', 'Republic of India', 'Bharat Ganrajya' ],
+    region: 'Asia',
+    subregion: 'Southern Asia',
+    population: 1295210000,
+    latlng: [ 20, 77 ],
+    demonym: 'Indian',
+    area: 3287590,
+    gini: 33.4,
+    timezones: [ 'UTC+05:30' ],
+    borders: [
+      'AFG', 'BGD',
+      'BTN', 'MMR',
+      'CHN', 'NPL',
+      'PAK', 'LKA'
+    ],
+    nativeName: 'भारत',
+    numericCode: '356',
+    currencies: [ [Object] ],
+    languages: [ [Object], [Object] ],
+    translations: {
+      de: 'Indien',
+      es: 'India',
+      fr: 'Inde',
+      ja: 'インド',
+      it: 'India',
+      br: 'Índia',
+      pt: 'Índia',
+      nl: 'India',
+      hr: 'Indija',
+      fa: 'هند'
+    },
+    flag: 'https://restcountries.eu/data/ind.svg',
+    regionalBlocs: [ [Object] ],
+    cioc: 'IND'
+  }

@@ -99,7 +99,6 @@ app.get('/countries/:country', (req, res)=>{
 			borderCountries: updatedBorders
 		})
 
-		console.log(updatedBorders);
 
 	}
 	

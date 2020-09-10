@@ -5,10 +5,8 @@ const ejs= require("ejs");
 const _ = require("lodash");
 const fs= require("fs");
 
-const args= process.argv.slice(2);
 
-let port= args[0]? args[0]: 3000;
-
+const port = process.env.PORT||'3000';
 
 const app= express();
 
